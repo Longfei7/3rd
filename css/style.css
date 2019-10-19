@@ -1,0 +1,164 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.global-setting {
+	font-family: calibri;
+}
+
+.masonry {
+	column-gap: 1em;
+	margin:1.5em auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    column-count: 4;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+@media only screen and (max-width: 539px) and (min-width: 250px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+.banner {
+	background-color: rgba(0,0,0,0.05);
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.btn-box {
+	height: 100%;
+	padding: 0px 10px;
+	display: inline-block;
+	transition: 0.3s ease-in-out;
+	display: flex;
+	align-items: center;
+}
+
+.btn-box:hover {
+	background-color: rgba(0,0,0,0.3);
+	color: rgba(0,0,0,0.5);
+}
+
+
+.btn {
+	color: rgba(0,0,0,0.3);
+	font-size: 23px;
+	text-decoration: none;
+}
+
+
+.symbols {
+	padding: 0 30px;
+
+}
+
+.symbols i {
+	margin:10px;
+	font-size: 25px;
+    color: rgba(0,0,0,0.3);
+    transition: 0.3s ease-in-out;
+}
+
+.symbols i:hover {
+	color: rgba(0,0,0,0.5);
+}
+
+.single-card {
+	width: 100%;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+	transition: opacity .7s ease;
+	margin:0 0 1em;
+	display: inline-block;
+	position: relative;
+}
+
+.single-card:after {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom:0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.3);
+	display: none;
+}
+
+.single-card:hover:after {
+	display: block;
+}
+
+.single-card:hover {
+	animation-name: pulse;
+	animation-duration: 0.8s;
+}
+
+
+.img-in-card {
+	width: 100%;
+	border-radius: 5px 5px 0 0;
+	/*height: auto;*/
+}
+
+
+.item-name {
+	padding: 0px 15px;
+	margin: 5px 0px;
+	font-family: calibri;
+	font-size: 20px;
+}
+
+.social-info {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+		justify-content: space-between;
+}
+
+.social-info p {
+	padding: 5px;
+	margin:5px;
+	font-family: calibri;
+
+}
+
+.user-info {
+	display: flex;
+}
+
+.avatar {
+	width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.loves {
+	display: flex;
+	align-items: center;
+}
+
+.loves i:hover {
+	color:red;
+}
